@@ -172,27 +172,27 @@ jobs:
         run: |
           make
           make quicktest
-        if: matrix.quicktest
+        #if: matrix.quicktest
 
       - name: Race test
         shell: bash
         run: |
           make racequicktest
-        if: matrix.racequicktest
+        #if: matrix.racequicktest
 
       - name: Code quality test
         shell: bash
         run: |
           make build_dep
           make check
-        if: matrix.check
+       # if: matrix.check
 
       - name: Compile all architectures test
         shell: bash
         run: |
           make
           make compile_all
-        if: matrix.compile_all
+        #if: matrix.compile_all
 
       - name: Deploy built binaries
         shell: bash
